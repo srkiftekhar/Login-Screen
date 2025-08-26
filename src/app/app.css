@@ -1,57 +1,41 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    letter-spacing: 2px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.form-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    border-radius: 5px;
-    width: 400px;
-    height: 500px;
-    margin: 20px auto;
+nav {
+  background-color: lightslategrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  color: white;
+  /* width: 100vw; */
 }
 
-.form-container h1{
-    margin-bottom: 42px;
+.app-container ul {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: yellow; */
+  width: 300px;
 }
 
-.input-cont{
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0;
+.app-container ul li {
+  list-style: none;
 }
 
-.input-cont input, button{
-    padding: 6px;
-    /* font-size: 12px; */
+li a {
+  text-decoration: none;
+  color: white;
+  /* background-color: antiquewhite; */
+  padding: 12px;
+  cursor: pointer;
 }
 
-.input-cont button{
-    background-color: antiquewhite;
-    border-radius: 5px;
-    color: black;
-    border-style: dotted;
+.active {
+  background-color: red;
 }
 
-.input-cont Label, button{
-    margin-bottom: 5px;
-    cursor: pointer;
-    
+nav h1 {
+  letter-spacing: 2px;
 }
-
-.parent-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-}
-
-.input-cont button:hover{
-
-}
-
