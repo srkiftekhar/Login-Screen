@@ -37,7 +37,7 @@ export class LoginScreen {
     if (this.emailReg.test(this.email) && this.passwrdReg.test(this.password)) {
       alert('login Successfull');
     }
-    this.router.navigate(['/home']);
+    this.router.navigate(['/dashboard']);
   }
 
   protected readonly title = signal('login-screen');

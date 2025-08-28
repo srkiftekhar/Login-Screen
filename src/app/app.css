@@ -5,11 +5,13 @@
 }
 nav {
   background-color: lightslategrey;
+  height: 56px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px;
   color: white;
+
   /* width: 100vw; */
 }
 
@@ -17,7 +19,7 @@ nav {
   display: flex;
   justify-content: space-between;
   /* background-color: yellow; */
-  width: 300px;
+  width: 410px;
 }
 
 .app-container ul li {
@@ -25,10 +27,11 @@ nav {
 }
 
 li a {
+  border-radius: 12px;
   text-decoration: none;
   color: white;
   /* background-color: antiquewhite; */
-  padding: 12px;
+  padding: 17px;
   cursor: pointer;
 }
 

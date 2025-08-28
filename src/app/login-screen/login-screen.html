@@ -1,24 +1,30 @@
-<div class="parent-container">
-  <form class="form-container" (ngSubmit)="loginHandler()" #loginForm="ngForm">
-    <h1>Login</h1>
+<div class="login-background">
+  <div class="parent-container">
+    <form
+      class="form-container"
+      (ngSubmit)="loginHandler()"
+      #loginForm="ngForm"
+    >
+      <h1>Login</h1>
 
-    <div class="input-cont">
-      <label for="email">Email:</label>
-      <input [(ngModel)]="email" type="email" id="email" name="email" />
-    </div>
-    <div class="input-cont">
-      <label for="pass">Password:</label>
-      <input
-        type="password"
-        [(ngModel)]="password"
-        name="password"
-        id="pass"
-        required
-      />
-    </div>
+      <div class="input-cont">
+        <label for="email">Email:</label>
+        <input [(ngModel)]="email" type="email" id="email" name="email" />
+      </div>
+      <div class="input-cont">
+        <label for="pass">Password:</label>
+        <input
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          id="pass"
+          required
+        />
+      </div>
 
-    <div class="input-cont">
-      <button type="submit">Submit</button>
-    </div>
-  </form>
+      <div class="input-cont">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
 </div>
