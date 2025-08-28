@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-background {
+  background: url("https://png.pngtree.com/background/20231030/original/pngtree-illustration-of-3d-rendered-laptop-computer-showcasing-the-concept-of-e-picture-image_5792554.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  letter-spacing: 2px;
+  margin-top: 3px;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+
+  background: rgba(255, 255, 255, 0.85); /* 🔹 add this line */
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* table */
+
+.table-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.table-card {
+  width: 90%;
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  background: rgba(255, 255, 255, 0.85); /* 🔹 add this line */
+}
+
+.table-card h3 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(97, 97, 194);
+  margin: 7px;
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 290px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .table-card {
+    width: 100%;
+  }
+}

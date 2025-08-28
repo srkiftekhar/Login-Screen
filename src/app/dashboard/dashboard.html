@@ -1,0 +1,144 @@
+<div class="dashboard-background">
+  <div class="card-container">
+    <mat-card class="card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>
+          <h2 class="title">MERN</h2>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <h3 class="subtitle">Frontend Developer</h3>
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <img
+        class="mern-img"
+        mat-card-image
+        src="https://softentec.com/wp-content/uploads/2022/05/MERN-1-1024x576.jpg"
+        alt="MERN Stack"
+      />
+
+      <mat-card-content>
+        <p class="description">
+          Front-End Developer with expertise in <b>HTML</b>, <b>CSS</b>,
+          <b>JavaScript</b>, and frameworks like <b>React</b> and
+          <b>Angular</b>, specializing in creating responsive and user-friendly
+          web interfaces.
+        </p>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <button mat-raised-button color="primary">
+          <mat-icon>thumb_up</mat-icon>&nbsp; Like
+        </button>
+        <button mat-stroked-button color="accent">
+          <mat-icon>share</mat-icon>&nbsp; Share
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>
+          <h2 class="title">Java</h2>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <h3 class="subtitle">Spring Boot</h3>
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <img
+        class="mern-img"
+        mat-card-image
+        src="https://www.devopsschool.com/blog/wp-content/uploads/2023/12/image-168.png"
+        alt="Spring Boot"
+      />
+
+      <mat-card-content>
+        <p class="description">
+          Dive into Spring Boot to develop microservices with this open-source,
+          Java-based framework. Gain expertise in core concepts including
+          starters, dependency injection, and REST API development. Equip
+          yourself with the skills to build production-ready applications.
+        </p>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <button mat-raised-button color="primary">
+          <mat-icon>thumb_up</mat-icon>&nbsp; Like
+        </button>
+        <button mat-stroked-button color="accent">
+          <mat-icon>share</mat-icon>&nbsp; Share
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>
+          <h2 class="title">PYTHON</h2>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <h3 class="subtitle">Data Analyst</h3>
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <img
+        class="mern-img"
+        mat-card-image
+        src="https://scaler-blog-prod-wp-content.s3.ap-south-1.amazonaws.com/wp-content/uploads/2024/06/26115156/data-analyst-course-syllabus-scaled.webp"
+        alt="MERN Stack"
+      />
+
+      <mat-card-content>
+        <p class="description">
+          Ranked #1 Data Analytics Training Institute with Certifications. Learn
+          Data Analytics with key tools like Excel, SQL, Power BI, Tableau,
+          Python. Gain practical skills in data cleaning, visualization, and
+          real-time business reporting.
+        </p>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <button mat-raised-button color="primary">
+          <mat-icon>thumb_up</mat-icon>&nbsp; Like
+        </button>
+        <button mat-stroked-button color="accent">
+          <mat-icon>share</mat-icon>&nbsp; Share
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- table -->
+  <div class="table-section">
+    <mat-card class="table-card">
+      <mat-card-title><h3>Recent Enrollments</h3></mat-card-title>
+      <div class="table-wrapper">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>ENROLL ID</th>
+            <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>STUDENT NAME</th>
+            <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="course">
+            <th mat-header-cell *matHeaderCellDef>COURSE</th>
+            <td mat-cell *matCellDef="let element">{{ element.course }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef>ENROLL DATE</th>
+            <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </div>
+    </mat-card>
+  </div>
+</div>

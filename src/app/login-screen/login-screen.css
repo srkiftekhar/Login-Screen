@@ -4,13 +4,26 @@
   box-sizing: border-box;
   letter-spacing: 2px;
 }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.login-background {
+  background: url("https://png.pngtree.com/background/20231030/original/pngtree-illustration-of-3d-rendered-laptop-computer-showcasing-the-concept-of-e-picture-image_5792554.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
 .form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: none;
-  background-color: aliceblue;
+  background-color: rgba(240, 248, 255, 0.85);
+  text-transform: uppercase;
   border-radius: 15px;
   width: 400px;
   height: 500px;
