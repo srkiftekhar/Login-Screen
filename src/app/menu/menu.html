@@ -1,0 +1,17 @@
+<div class="menu-container">
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Username</button>
+    <button mat-menu-item>Email</button>
+    <button mat-menu-item>Help</button>
+    <button mat-menu-item *ngIf="!auth.isLoggedIn()" routerLink="/login">
+      Login
+    </button>
+    <button mat-menu-item *ngIf="auth.isLoggedIn()" (click)="auth.logout()">
+      Logout
+    </button>
+  </mat-menu>
+</div>

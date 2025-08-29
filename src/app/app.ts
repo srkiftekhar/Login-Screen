@@ -8,11 +8,12 @@ import {
 } from '@angular/router';
 import { Auth } from './services/auth';
 import { CommonModule, NgIf } from '@angular/common';
-import { LogoutDialog } from './logout-dialog/logout-dialog';
+// import { LogoutDialog } from './logout-dialog/logout-dialog';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 // import { NgIf } from '../../node_modules/@angular/common/common_module.d';
 // import { Auth } from './services/auth';
 import { filter } from 'rxjs/operators';
+import { Menu } from './menu/menu';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { filter } from 'rxjs/operators';
     RouterLinkActive,
     CommonModule,
     MatDialogModule,
+    Menu,
   ],
   templateUrl: './app.html',
   styleUrls: ['./app.css'],
