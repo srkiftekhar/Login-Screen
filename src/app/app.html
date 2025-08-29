@@ -10,11 +10,15 @@
       <li><a routerLinkActive="active" routerLink="/contact">Contact</a></li>
       <li>
         <a
+          *ngIf="!auth.isLoggedIn() || isLoginRoute"
           [routerLinkActiveOptions]="{ exact: true }"
           routerLinkActive="active"
           routerLink="/"
           >Login</a
         >
+      </li>
+      <li *ngIf="auth.isLoggedIn() && !isLoginRoute">
+        <a href="#" (click)="logout()">Logout</a>
       </li>
     </ul>
   </nav>

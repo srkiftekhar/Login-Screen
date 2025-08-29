@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Auth } from '../services/auth';
 
 @Component({
   selector: 'app-login-screen',
@@ -15,7 +16,7 @@ export class LoginScreen {
   emailReg = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
   passwrdReg = /^[0-9]{6}$/;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private auth: Auth) {}
 
   loginHandler() {
     if (!this.email) {
@@ -37,6 +38,9 @@ export class LoginScreen {
     if (this.emailReg.test(this.email) && this.passwrdReg.test(this.password)) {
       alert('login Successfull');
     }
+
+    this.auth.login();
+
     this.router.navigate(['/dashboard']);
   }
 
