@@ -25,10 +25,12 @@
 }
 
 .menu-container {
-  position: absolute;
+  /* position: absolute;
   top: 10px;
   left: 10px;
-  z-index: 1000;
+  z-index: 1000; */
+  /* background-color: red; */
+  border-radius: 50%;
 }
 
 button[mat-icon-button] {

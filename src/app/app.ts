@@ -33,8 +33,7 @@ export class App {
 
   constructor(
     public auth: Auth,
-    private router: Router,
-    private dialog: MatDialog
+    private router: Router // private dialog: MatDialog
   ) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
@@ -57,9 +56,8 @@ export class App {
   logout() {
     const confirmed = confirm('Are you sure you want to logout?');
     if (confirmed) {
-      // Perform logout
       console.log('User logged out');
-      this.router.navigate(['/login']);
+      this.router.navigate(['/']);
     }
   }
 }

@@ -41,4 +41,19 @@ li a {
 
 nav h1 {
   letter-spacing: 2px;
+  /* background-color: aqua; */
+}
+
+.menu-h1 {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 700px) {
+  .menu-h1 h1 {
+    display: none;
+  }
 }
