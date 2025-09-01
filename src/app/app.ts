@@ -8,11 +8,12 @@ import {
 } from '@angular/router';
 import { Auth } from './services/auth';
 import { CommonModule, NgIf } from '@angular/common';
-import { LogoutDialog } from './logout-dialog/logout-dialog';
+// import { LogoutDialog } from './logout-dialog/logout-dialog';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 // import { NgIf } from '../../node_modules/@angular/common/common_module.d';
 // import { Auth } from './services/auth';
 import { filter } from 'rxjs/operators';
+import { Menu } from './menu/menu';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { filter } from 'rxjs/operators';
     RouterLinkActive,
     CommonModule,
     MatDialogModule,
+    Menu,
   ],
   templateUrl: './app.html',
   styleUrls: ['./app.css'],
@@ -31,8 +33,7 @@ export class App {
 
   constructor(
     public auth: Auth,
-    private router: Router,
-    private dialog: MatDialog
+    private router: Router // private dialog: MatDialog
   ) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
@@ -55,9 +56,8 @@ export class App {
   logout() {
     const confirmed = confirm('Are you sure you want to logout?');
     if (confirmed) {
-      // Perform logout
       console.log('User logged out');
-      this.router.navigate(['/login']);
+      this.router.navigate(['/']);
     }
   }
 }
